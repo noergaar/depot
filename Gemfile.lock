@@ -69,6 +69,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel (= 3.0.8)
   rails (= 3.0.8)
   rake (~> 0.8.7)
   sqlite3
