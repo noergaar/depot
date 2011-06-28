@@ -150,3 +150,7 @@
 #store .entry form, #store .entry form div {
     display: inline;
 }
+
+.image_link {
+    border: 0;
+}

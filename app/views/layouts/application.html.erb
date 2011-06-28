@@ -19,6 +19,7 @@
     <a href="http://www..../contact">Contact</a><br />
     <br/>
     <a>Time: <br /><%=@time%></a><br />
+    <a><%= pluralize session[:counter], 'time' %></a>
   </div>
   <div id="main">
     <%= yield %>
