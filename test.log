@@ -2,7 +2,7 @@
 Loaded suite /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader
 Started
 .E...E...............F
-Finished in 0.900443 seconds.
+Finished in 0.908853 seconds.
 
   1) Error:
 test_should_destroy_cart(CartsControllerTest):
@@ -38,7 +38,7 @@ ActiveRecord::StatementInvalid: SQLite3::SQLException: no such column: line_item
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:436:in `_run__86659521__process_action__259963242__callbacks'
+    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:436:in `_run__744445757__process_action__86818040__callbacks'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
@@ -78,7 +78,7 @@ ActionView::Template::Error: SQLite3::SQLException: no such column: line_items.c
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:410:in `load_target'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_proxy.rb:213:in `method_missing'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:431:in `method_missing'
-    /home/bjarne/rails_projects/depot/app/views/carts/show.html.erb:3:in `_app_views_carts_show_html_erb__289021801_81958470__71428958'
+    /home/bjarne/rails_projects/depot/app/views/carts/show.html.erb:3:in `_app_views_carts_show_html_erb___364033358_74125410_504783737'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/template.rb:135:in `block in render'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
     /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
@@ -106,4 +106,4 @@ Expected at least 4 elements matching "#columns #side a", found 0.
 
 22 tests, 29 assertions, 1 failures, 2 errors, 0 skips
 
-Test run options: --seed 18260
+Test run options: --seed 64071
