@@ -3,6 +3,7 @@ class StoreController < ApplicationController
     @products = Product.all
     @time = Time.zone.now
     @count = increment_count
+    @cart = current_cart
   end
 
   def increment_count
