@@ -1,0 +1,182 @@
+diff --git a/app/controllers/carts_controller.rb b/app/controllers/carts_controller.rb
+index 440ecce..d04d13c 100644
+--- a/app/controllers/carts_controller.rb
++++ b/app/controllers/carts_controller.rb
+@@ -92,7 +92,7 @@ class CartsController < ApplicationController
+     session[:cart_id] = nil
+ 
+     respond_to do |format|
+-      format.html { redirect_to(store_url) }
++      format.html { redirect_to(store_url, :notice => 'Your cart is currently empty') }
+       format.xml  { head :ok }
+     end
+   end
+diff --git a/app/controllers/line_items_controller.rb b/app/controllers/line_items_controller.rb
+index c2b6009..bf0d2e3 100644
+--- a/app/controllers/line_items_controller.rb
++++ b/app/controllers/line_items_controller.rb
+@@ -49,8 +49,7 @@ class LineItemsController < ApplicationController
+ 
+     respond_to do |format|
+       if @line_item.save
+-        format.html { redirect_to(store_url)}
+-        format.js
++        format.html { redirect_to(@line_item.cart)}
+         format.xml  { render :xml => @line_item, :status => :created, :location => @line_item }
+       else
+         format.html { render :action => "new" }
+@@ -86,7 +85,7 @@ class LineItemsController < ApplicationController
+     end
+ 
+     respond_to do |format|
+-      format.html { redirect_to(store_url) }
++      format.html { redirect_to(cart_url(session[:cart_id])) }
+       format.xml  { head :ok }
+     end
+ 
+diff --git a/app/controllers/store_controller.rb b/app/controllers/store_controller.rb
+index 4260ccf..304c232 100644
+--- a/app/controllers/store_controller.rb
++++ b/app/controllers/store_controller.rb
+@@ -3,7 +3,6 @@ class StoreController < ApplicationController
+     @products = Product.all
+     @time = Time.zone.now
+     @count = increment_count
+-    @cart = current_cart
+   end
+ 
+   def increment_count
+diff --git a/app/views/carts/_cart.html.erb b/app/views/carts/_cart.html.erb
+deleted file mode 100644
+index 067fc8c..0000000
+--- a/app/views/carts/_cart.html.erb
++++ /dev/null
+@@ -1,15 +0,0 @@
+-<div class="cart_title">Your Cart</div>
+-<table>
+-
+-<%= render(cart.line_items) %>
+-
+-  <tr class="total_line"
+-    <td colspan="2">Total</td>
+-    <td class="total_cell"><%= number_to_currency(cart.total_price, :unit => "DKK ") %></td>
+-  </tr>
+-</table>
+-
+-
+-<%= button_to 'Empty cart', cart, :method => :delete, :confirm => 'Are you sure?' %>
+-
+-
+diff --git a/app/views/carts/show.html.erb b/app/views/carts/show.html.erb
+index e2278b2..2911c3b 100644
+--- a/app/views/carts/show.html.erb
++++ b/app/views/carts/show.html.erb
+@@ -1 +1,26 @@
+-<%= render @cart %>
+\ No newline at end of file
++<% if notice %>
++  <p id="notice"><%= notice %></p>
++<% end %>
++
++<div class="cart_title">Your Cart</div>
++<table>
++  <% @cart.line_items.each do |item| %>
++  <tr>
++    <td><%= item.quantity %>&times;</td>
++    <td><%= item.product.title %>&times;</td>
++    <td class="item_price"><%= number_to_currency(item.total_price) %></td>
++    <td><%= button_to 'Remove', item, :method => :delete %></td>
++  </tr>
++<% end %>
++
++  <tr class="total_line"
++    <td colspan="2">Total</td>
++    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
++  </tr>
++</table>
++
++<%= link_to 'Back', store_path %>
++
++
++<%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
++
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index c8e9a0a..ed01a8f 100644
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -12,12 +12,7 @@
+        <%= image_tag("logo.png") %>
+        <%= @page_title || "Pragmatic Bookshelf" %>
+     </div>
+-  <div id="columns">
+-    <div id="side">
+-      <div id="cart">
+-        <%= render @cart %>
+-      </div>
+-
++  <div id ="side">
+     <a href="http://www....">Home</a><br />
+     <a href="http://www..../faq">Questions</a><br />
+     <a href="http://www..../news">News</a><br />
+@@ -29,6 +24,5 @@
+   <div id="main">
+     <%= yield %>
+   </div>
+-  </div>
+ </body>
+ </html>
+diff --git a/app/views/line_items/_line_item.html.erb b/app/views/line_items/_line_item.html.erb
+deleted file mode 100644
+index 26c6114..0000000
+--- a/app/views/line_items/_line_item.html.erb
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<tr>
+-  <td><%= line_item.quantity %>&times;</td>
+-    <td><%= line_item.product.title %></td>
+-    <td class="item_price"><%= number_to_currency(line_item.total_price, :unit => "DKK ") %></td>
+-    <td><%= link_to 'R', line_item, :method => :delete %></td>
+-</tr>
+diff --git a/app/views/line_items/create.js.rjs b/app/views/line_items/create.js.rjs
+deleted file mode 100644
+index 276d5aa..0000000
+--- a/app/views/line_items/create.js.rjs
++++ /dev/null
+@@ -1 +0,0 @@
+-page.replace_html('cart', render(@cart))
+\ No newline at end of file
+diff --git a/app/views/store/index.html.erb b/app/views/store/index.html.erb
+index 114f1ae..5c61154 100644
+--- a/app/views/store/index.html.erb
++++ b/app/views/store/index.html.erb
+@@ -13,7 +13,7 @@
+     <%=sanitize(product.description) %>
+     <div class="price_line">
+         <span class="price"><%= number_to_currency(product.price, :unit => "DKK ") %></span>
+-        <%= button_to 'Add to Cart', line_items_path(:product_id => product), :remote => true %>
++        <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
+     </div>
+    </div>
+ <%  end %>
+\ No newline at end of file
+diff --git a/public/stylesheets/depot.css b/public/stylesheets/depot.css
+index 5295c09..1ca2dc4 100644
+--- a/public/stylesheets/depot.css
++++ b/public/stylesheets/depot.css
+@@ -165,15 +165,4 @@
+ #store .total_line .total_cell {
+     font-weight: bold;
+     border-top: 1px solid #595;
+-}
+-
+-/* Styles for the cart in the sidebar*/
+-#cart, #cart table {
+-    font-size:  smaller;
+-    color:      white;
+-}
+-#cart table {
+-    border-top: 1px dotted #595;
+-    border-bottom: 1px dotted #595;
+-    margin-bottom: 10px;
+ }
+\ No newline at end of file

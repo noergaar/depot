@@ -1,109 +1,27 @@
 (in /home/bjarne/rails_projects/depot)
 Loaded suite /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader
 Started
-.E...E...............F
-Finished in 0.908853 seconds.
+.....
+Finished in 0.237305 seconds.
 
-  1) Error:
-test_should_destroy_cart(CartsControllerTest):
-ActiveRecord::StatementInvalid: SQLite3::SQLException: no such column: line_items.cart_id: SELECT "line_items".* FROM "line_items" WHERE ("line_items".cart_id = 980190962)
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract_adapter.rb:207:in `rescue in log'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract_adapter.rb:199:in `log'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/sqlite_adapter.rb:135:in `execute'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/sqlite_adapter.rb:284:in `select'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:56:in `select_all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/base.rb:473:in `find_by_sql'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/relation.rb:64:in `to_a'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/relation/finder_methods.rb:143:in `all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:70:in `block in find'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/base.rb:1127:in `with_scope'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_proxy.rb:207:in `with_scope'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:63:in `find'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:468:in `find_target'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:410:in `load_target'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_proxy.rb:213:in `method_missing'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:431:in `method_missing'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations.rb:1606:in `block in configure_dependency_for_has_many'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:415:in `_run_destroy_callbacks'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/callbacks.rb:256:in `destroy'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/transactions.rb:235:in `block in destroy'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/transactions.rb:292:in `block in with_transaction_returning_status'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/database_statements.rb:139:in `transaction'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/transactions.rb:207:in `transaction'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/transactions.rb:290:in `with_transaction_returning_status'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/transactions.rb:235:in `destroy'
-    /home/bjarne/rails_projects/depot/app/controllers/carts_controller.rb:76:in `destroy'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:436:in `_run__744445757__process_action__86818040__callbacks'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/testing.rb:12:in `process_with_new_base_test'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/test_case.rb:412:in `process'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/test_case.rb:47:in `process'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/test_case.rb:365:in `delete'
-    test/functional/carts_controller_test.rb:44:in `block (2 levels) in <class:CartsControllerTest>'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/testing/assertions.rb:42:in `assert_difference'
-    test/functional/carts_controller_test.rb:43:in `block in <class:CartsControllerTest>'
+5 tests, 14 assertions, 0 failures, 0 errors, 0 skips
 
-  2) Error:
-test_should_show_cart(CartsControllerTest):
-ActionView::Template::Error: SQLite3::SQLException: no such column: line_items.cart_id: SELECT "line_items".* FROM "line_items" WHERE ("line_items".cart_id = 980190962)
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract_adapter.rb:207:in `rescue in log'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract_adapter.rb:199:in `log'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/sqlite_adapter.rb:135:in `execute'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/sqlite_adapter.rb:284:in `select'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:56:in `select_all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/base.rb:473:in `find_by_sql'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/relation.rb:64:in `to_a'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/relation/finder_methods.rb:143:in `all'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:70:in `block in find'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/base.rb:1127:in `with_scope'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_proxy.rb:207:in `with_scope'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:63:in `find'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:468:in `find_target'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:410:in `load_target'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_proxy.rb:213:in `method_missing'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activerecord-3.0.8/lib/active_record/associations/association_collection.rb:431:in `method_missing'
-    /home/bjarne/rails_projects/depot/app/views/carts/show.html.erb:3:in `_app_views_carts_show_html_erb___364033358_74125410_504783737'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/template.rb:135:in `block in render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:59:in `block in _render_template'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
-    /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+Test run options: --seed 37901
+Loaded suite /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader
+Started
+.F...F................
+Finished in 0.927214 seconds.
 
-  3) Failure:
-test_should_get_index(StoreControllerTest) [test/functional/store_controller_test.rb:7]:
-Expected at least 4 elements matching "#columns #side a", found 0.
+  1) Failure:
+test_should_destroy_cart(CartsControllerTest) [test/functional/carts_controller_test.rb:43]:
+"Cart.count" didn't change by -1.
+<1> expected but was
+<2>.
 
-22 tests, 29 assertions, 1 failures, 2 errors, 0 skips
+  2) Failure:
+test_should_show_cart(CartsControllerTest) [test/functional/carts_controller_test.rb:29]:
+Expected block to return true value.
 
-Test run options: --seed 64071
+22 tests, 34 assertions, 2 failures, 0 errors, 0 skips
+
+Test run options: --seed 33213
