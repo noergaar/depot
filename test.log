@@ -1,27 +1,101 @@
 (in /home/bjarne/rails_projects/depot)
-Loaded suite /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader
-Started
-.....
-Finished in 0.237305 seconds.
-
-5 tests, 14 assertions, 0 failures, 0 errors, 0 skips
-
-Test run options: --seed 37901
-Loaded suite /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader
-Started
-.F...F................
-Finished in 0.927214 seconds.
-
-  1) Failure:
-test_should_destroy_cart(CartsControllerTest) [test/functional/carts_controller_test.rb:43]:
-"Cart.count" didn't change by -1.
-<1> expected but was
-<2>.
-
-  2) Failure:
-test_should_show_cart(CartsControllerTest) [test/functional/carts_controller_test.rb:29]:
-Expected block to return true value.
-
-22 tests, 34 assertions, 2 failures, 0 errors, 0 skips
-
-Test run options: --seed 33213
+/home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activemodel-3.0.8/lib/active_model/validations/validates.rb:79:in `validates': You need to supply at least one validation (ArgumentError)
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:10:in `<class:User>'
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:3:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `block in require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:227:in `load_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:346:in `require_or_load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:300:in `depend_on'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:216:in `require_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:138:in `block (2 levels) in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `block in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:108:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application/finisher.rb:41:in `block in <module:Finisher>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `run'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:134:in `initialize!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+	from /home/bjarne/rails_projects/depot/config/environment.rb:5:in `<top (required)>'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `require'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `<top (required)>'
+	from test/unit/line_item_test.rb:1:in `require'
+	from test/unit/line_item_test.rb:1:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `block in <main>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `<main>'
+/home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activemodel-3.0.8/lib/active_model/validations/validates.rb:79:in `validates': You need to supply at least one validation (ArgumentError)
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:10:in `<class:User>'
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:3:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `block in require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:227:in `load_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:346:in `require_or_load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:300:in `depend_on'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:216:in `require_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:138:in `block (2 levels) in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `block in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:108:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application/finisher.rb:41:in `block in <module:Finisher>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `run'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:134:in `initialize!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+	from /home/bjarne/rails_projects/depot/config/environment.rb:5:in `<top (required)>'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `require'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `<top (required)>'
+	from test/functional/notifier_test.rb:1:in `require'
+	from test/functional/notifier_test.rb:1:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `block in <main>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `<main>'
+/home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activemodel-3.0.8/lib/active_model/validations/validates.rb:79:in `validates': You need to supply at least one validation (ArgumentError)
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:10:in `<class:User>'
+	from /home/bjarne/rails_projects/depot/app/models/user.rb:3:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `block in require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:227:in `load_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:239:in `require'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:346:in `require_or_load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:300:in `depend_on'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/activesupport-3.0.8/lib/active_support/dependencies.rb:216:in `require_dependency'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:138:in `block (2 levels) in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:137:in `block in eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/engine.rb:135:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:108:in `eager_load!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application/finisher.rb:41:in `block in <module:Finisher>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:25:in `run'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:134:in `initialize!'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+	from /home/bjarne/rails_projects/depot/config/environment.rb:5:in `<top (required)>'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `require'
+	from /home/bjarne/rails_projects/depot/test/test_helper.rb:2:in `<top (required)>'
+	from test/integration/user_stories_test.rb:1:in `require'
+	from test/integration/user_stories_test.rb:1:in `<top (required)>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `load'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `block in <main>'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+	from /home/bjarne/.rvm/gems/ree-1.8.7-2011.03@rails3/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `<main>'
+Errors running test:units, test:functionals, test:integration!
