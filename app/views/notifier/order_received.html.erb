@@ -1,0 +1,18 @@
+<h3>Order received from Bjarnes Books</h3>
+<p>
+Dear <%= @order.name %> <br /><br />
+
+Thank you for your recent order from Bjarnes Books.
+
+You ordered the following items:
+
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+
+  <%= render @order.line_items %>
+
+</table>
+
+We'll send you a seperate e-mail when your order ships.
+</p>
+
