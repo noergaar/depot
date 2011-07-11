@@ -9,7 +9,9 @@ gem 'activemodel', '3.0.8'
 
 gem 'sqlite3'
 
-
+group :production do
+    gem 'mysql'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
